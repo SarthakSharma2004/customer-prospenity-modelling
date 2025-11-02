@@ -1,0 +1,39 @@
+2025-10-28 20:10:32 - __main__ - INFO - Starting the pipeline
+2025-10-28 20:10:32 - src.data_ingestion - INFO - Loading data from /Data/raw/Travel.csv
+2025-10-28 20:10:32 - src.data_ingestion - INFO - Data loaded Successfully. Shape : (4888, 20)
+2025-10-28 20:10:32 - __main__ - INFO - Data Ingestion completed. Shape : (4888, 20)
+2025-10-28 20:10:32 - src.preprocessing - INFO - Data Preprocessing started..
+2025-10-28 20:10:32 - src.preprocessing - INFO - Cleaned column names
+2025-10-28 20:10:32 - src.preprocessing - INFO - Columns : ['CustomerID', 'ProdTaken', 'Age', 'TypeofContact', 'CityTier', 'DurationOfPitch', 'Occupation', 'Gender', 'NumberOfPersonVisiting', 'NumberOfFollowups', 'ProductPitched', 'PreferredPropertyStar', 'MaritalStatus', 'NumberOfTrips', 'Passport', 'PitchSatisfactionScore', 'OwnCar', 'NumberOfChildrenVisiting', 'Designation', 'MonthlyIncome']
+2025-10-28 20:10:32 - src.preprocessing - INFO - No Duplicate records. No rows dropped
+2025-10-28 20:10:32 - src.preprocessing - INFO - Column dropped: CustomerID. New shape : (4888, 19)
+2025-10-28 20:10:32 - src.preprocessing - INFO - There are 13 numeric columns and 6 categorical columns
+2025-10-28 20:10:32 - src.preprocessing - INFO - There are 7 numeric columns with missing values and 1 categorical columns with missing values
+2025-10-28 20:10:32 - src.preprocessing - INFO - Filled all numeric columns missing values with median values
+2025-10-28 20:10:32 - src.preprocessing - INFO - Filled all categorical columns missing values with mode values
+2025-10-28 20:10:32 - src.preprocessing - INFO - Converted all numeric columns to int
+2025-10-28 20:10:32 - src.preprocessing - INFO - Fixed 'Fe Male' to 'Female' in Gender column
+2025-10-28 20:10:32 - src.preprocessing - INFO - Fixed 'Single' to 'Unmarried' in MaritalStatus column
+2025-10-28 20:10:32 - src.preprocessing - INFO - No categories marked as 'others' in TypeofContact column
+2025-10-28 20:10:32 - src.preprocessing - INFO - Marked 1 categories as 'others' in Occupation column
+2025-10-28 20:10:32 - src.preprocessing - INFO - No categories marked as 'others' in Gender column
+2025-10-28 20:10:32 - src.preprocessing - INFO - No categories marked as 'others' in ProductPitched column
+2025-10-28 20:10:32 - src.preprocessing - INFO - No categories marked as 'others' in MaritalStatus column
+2025-10-28 20:10:32 - src.preprocessing - INFO - No categories marked as 'others' in Designation column
+2025-10-28 20:10:32 - src.preprocessing - INFO - Created 'TotalPersonVisiting' and 'isChildrenVisiting' column and dropped unnecessary columns
+2025-10-28 20:10:32 - src.preprocessing - INFO - Data shape after preprocessing : (4888, 19)
+2025-10-28 20:10:32 - src.preprocessing - INFO - Columns after preprocessing : ['ProdTaken', 'Age', 'TypeofContact', 'CityTier', 'DurationOfPitch', 'Occupation', 'Gender', 'NumberOfFollowups', 'ProductPitched', 'PreferredPropertyStar', 'MaritalStatus', 'NumberOfTrips', 'Passport', 'PitchSatisfactionScore', 'OwnCar', 'Designation', 'MonthlyIncome', 'TotalPersonVisiting', 'isChildrenVisiting']
+2025-10-28 20:10:32 - src.preprocessing - INFO - Data Preprocessing completed
+2025-10-28 20:10:32 - __main__ - INFO - Data Preprocessing completed. Shape : (4888, 19)
+2025-10-28 20:10:32 - src.model_training - INFO - Data Transformation started..
+2025-10-28 20:10:32 - src.model_training - INFO - Defined dependent and independent variables
+2025-10-28 20:10:32 - src.model_training - INFO - Splitted into train and test
+2025-10-28 20:10:32 - src.model_training - INFO - Columns before transformation : ['Age', 'CityTier', 'DurationOfPitch', 'NumberOfFollowups', 'PreferredPropertyStar', 'NumberOfTrips', 'Passport', 'PitchSatisfactionScore', 'OwnCar', 'MonthlyIncome', 'TotalPersonVisiting', 'isChildrenVisiting'] , ['TypeofContact', 'Occupation', 'Gender', 'ProductPitched', 'MaritalStatus', 'Designation']
+2025-10-28 20:10:32 - src.model_training - INFO - Defined column transformer
+2025-10-28 20:10:32 - __main__ - INFO - Data Transformed and ready for training.
+2025-10-28 20:10:32 - src.model_training - INFO - Model : XGBClassifier , Parameters : {'objective': 'binary:logistic', 'base_score': None, 'booster': None, 'callbacks': None, 'colsample_bylevel': None, 'colsample_bynode': None, 'colsample_bytree': None, 'device': None, 'early_stopping_rounds': None, 'enable_categorical': False, 'eval_metric': 'logloss', 'feature_types': None, 'feature_weights': None, 'gamma': None, 'grow_policy': None, 'importance_type': None, 'interaction_constraints': None, 'learning_rate': None, 'max_bin': None, 'max_cat_threshold': None, 'max_cat_to_onehot': None, 'max_delta_step': None, 'max_depth': None, 'max_leaves': None, 'min_child_weight': None, 'missing': nan, 'monotone_constraints': None, 'multi_strategy': None, 'n_estimators': None, 'n_jobs': None, 'num_parallel_tree': None, 'random_state': 42, 'reg_alpha': 0.1, 'reg_lambda': 5, 'sampling_method': None, 'scale_pos_weight': np.float64(4.363511659807956), 'subsample': None, 'tree_method': None, 'validate_parameters': None, 'verbosity': None, 'use_label_encoder': False}
+2025-10-28 20:10:33 - src.model_training - INFO - Pipeline trained successfully
+2025-10-28 20:10:33 - src.model_training - INFO - Metrics: {'accuracy':  0.9519427402862985, 'precision': 0.9090909090909091, 'recall': 0.837696335078534, 'f1': 0.8719346049046321}
+2025-10-28 20:10:33 - src.model_training - INFO - Pipeline saved to best_model_pipeline.pkl
+2025-10-28 20:10:33 - __main__ - INFO - Pipeline completed successfully
+
