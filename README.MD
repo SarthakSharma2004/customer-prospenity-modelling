@@ -39,6 +39,9 @@
 *Predicting which customers are most likely to purchase the “Bliss Retreat Wellness Package” using data-driven insights.*
 
 
+---
+
+
 ## 🌍 Project Overview
 
 WanderWells Travels, a rapidly growing luxury travel company, aims to revolutionize customer targeting for its newest offering — the Zen Escape Wellness Package 🧘‍♀️✨
@@ -46,6 +49,10 @@ WanderWells Travels, a rapidly growing luxury travel company, aims to revolution
 Previously, marketing campaigns reached customers randomly, leading to high costs and low conversion rates.
 
 This project uses machine learning and data analytics to identify which customers are most likely to purchase the new package — helping the marketing team work smarter, not harder.
+
+
+---
+
 
 
 ## 🎯 Objective
@@ -59,6 +66,10 @@ To build a predictive model that classifies potential customers into two groups:
 This helps the marketing team focus resources on the most promising leads, thereby reducing costs and boosting sales.
 
 
+---
+
+
+
 ## 📊 About the Data
 
 *Dataset Link*
@@ -67,6 +78,10 @@ This helps the marketing team focus resources on the most promising leads, there
 
 
 The dataset contains information about customer demographics, behavior, and interactions with the sales team.
+
+
+---
+
 
 
 ## 🧠 Approach
@@ -78,15 +93,23 @@ The dataset contains information about customer demographics, behavior, and inte
 * Visualized demographic patterns using Seaborn and Matplotlib
 
 
+---
+
+
+
 2. 🧹 Data Preprocessing
 
-Handled missing values
+* Handled missing values
 
-Encoded categorical features 
+* Encoded categorical features 
 
-Scaled numerical features
+* Scaled numerical features
 
-Created new impactful features from existing ones
+* Created new impactful features from existing ones
+
+
+---
+
 
 
 3. 🤖 Model Development 
@@ -103,12 +126,19 @@ Trained multiple classification models:
 
 XGBOOST CLASSIFIER was selected as the best-performing classifier model after hyperparameter tuning. 
 
+
+---
+
+
 ## 🌐 Model Deployment
 
 Exposed model predictions via FastAPI , Dockerised the API and deployed it on AWS (EC2)
 Integrated frontend using Streamlit , deployed using render
 
-🐳 [Docker Image] (https://hub.docker.com/repository/docker/isarthak24/customer-prospenity-api/general)
+[![Docker Image](https://img.shields.io/badge/Docker-Container-blue?logo=docker)](https://hub.docker.com/repository/docker/isarthak24/customer-prospenity-api/general)
+
+
+---
 
 
 ## 🖥️ Tech Stack
@@ -124,41 +154,92 @@ Integrated frontend using Streamlit , deployed using render
 | **IDE**                  | Visual Studio Code, Jupyter Notebook             |
 
 
+---
+
 
 ## Project Structure :
 
 WanderWells_Travels_Propensity_Model/
+
 ├── Data/
+|
 │ ├── raw_data.csv
+|
 │ └── cleaned_data.csv
+|
+|
 ├── artifacts/
+|
 │ ├── best_model_pipeline.pkl
+|
 │ ├── model.pkl
+|
 │ └── preprocessor.pkl
+|
+|
 ├── notebooks/
+|
 │ └── Prospenity_Modelling.ipynb
+|
+|
 ├── logs/
-│ └── logs # contains all the logs of the model pipeline
+|
+│ └── logs                        # contains all the logs of the model pipeline
+|
+|
 ├── schema/
+|
 │ ├── prediction_response.py # Pydantic Model to validate response
+|
 │ └── user_input.py # Pydantic Model to validate user input
+|
+|
+|
 ├── src/
+|
 │ ├── data_ingestion.py # Frontend Interface
+|
 │ ├── preprocessing.py
+|
 │ └── model_training.py
+|
+|
 ├── utils/
+|
 │ └── logger.py
-├── pipeline.py # Orchestrates all scripts in src folder
-├── main.py # FastAPI code
-├── predict.py # Utility function used in main.py
-├── app.py # Streamlit frontend
+|
+|
+├── pipeline.py                   # Orchestrates all scripts in src folder
+|
+|
+├── main.py                       # FastAPI code
+|
+|
+├── predict.py                    # Utility function used in main.py
+|
+|
+├── app.py                        # Streamlit frontend
+|
+|
 ├── .dockerignore
+|
+|
 ├── Dockerfile
+|
+|
 ├── .gitignore
-├── requirements.txt # For containerisation
-├── requirements-dev.txt # For creating the environment
+|
+|
+├── requirements.txt              # For containerisation
+|
+|
+├── requirements-dev.txt          # For creating the environment
+|
+|
 └── README.md
 
+
+---
 
 
 ## KPI And Insights
@@ -171,19 +252,26 @@ WanderWells_Travels_Propensity_Model/
 * Unmarried customers had better conversion rate than Married
 
 
+---
+
+
 ## 🏆 Conclusion
 
 This project demonstrates how data-driven marketing can significantly reduce cost and increase conversions in the travel industry.
 With predictive modeling, WanderWells Travels can now target the right customers at the right time, enhancing both customer satisfaction and business revenue.
 
 
+---
+
+
 ## 👨‍💻 Author
 
 Sarthak Sharma
 
-Data Science Student | Machine Learning , Deep Learning , NLP , GenAI Enthusiast
+Data Science Student  |  Machine Learning  |  Deep Learning  |   NLP  |  GenAI
 
-📧 [Email Me](2sarthaksharma@gmail.com)
+[![Email](https://img.shields.io/badge/Email-Write-blue?logo=gmail)](mailto:sarthaksharma@gmail.com)
+
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sarthak-sharma-2004/)
 
