@@ -1,0 +1,28 @@
+# Virtual environments
+venv/
+.env
+
+# Caches and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Data and training related folders (not needed for API runtime)
+Data/
+notebooks/
+logs/
+src/
+utils/
+
+# Frontend App
+app.py
+
+# System or editor files
+.DS_Store
+*.log
+
+# Git and Docker files
+.git/
+.gitignore
+

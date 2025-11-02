@@ -1,0 +1,21 @@
+# BASE IMAGE 
+
+FROM python:3.13-slim
+
+# WORKING DIRECTORY INSIDE THE CONTAINER
+WORKDIR /app
+
+# COPYING THE REQUIREMENTS FILE INTO THE CONTAINER
+COPY requirements.txt .
+
+# INSTALLING THE REQUIREMENTS AND DEPENDENCIES
+RUN pip install --no-cache-dir -r requirements.txt
+
+# COPYING THE CODE INTO THE CONTAINER
+COPY . .
+
+# EXPOSING THE PORT
+EXPOSE 8000
+
+# RUNNING THE APP
+CMD ["uvicorn" , "main:app" , "--host" , "0.0.0.0" , "--port" , "8000"]
