@@ -128,43 +128,35 @@ Integrated frontend using Streamlit , deployed using render
 ## Project Structure :
 
 WanderWells_Travels_Propensity_Model/
-│
 ├── Data/
-│   ├── raw_data.csv
-│   └── cleaned_data.csv
-|
+│ ├── raw_data.csv
+│ └── cleaned_data.csv
 ├── artifacts/
-|   ├── best_model_pipeline.pkl  
-|   ├── model.pkl
-|   ├── preprocessor.pkl
-|
+│ ├── best_model_pipeline.pkl
+│ ├── model.pkl
+│ └── preprocessor.pkl
 ├── notebooks/
-│   ├── Prospenity_Modelling.ipynb
-│ 
+│ └── Prospenity_Modelling.ipynb
 ├── logs/
-|   ├── logs                      # contains all the logs of the model pipeline
-|    
+│ └── logs # contains all the logs of the model pipeline
 ├── schema/
-│   ├── prediction_response.py    # Pydantic Model to validate response
-│   ├── user_input.py             # Pydantic Model to validate user input               
-│
+│ ├── prediction_response.py # Pydantic Model to validate response
+│ └── user_input.py # Pydantic Model to validate user input
 ├── src/
-│   └── data_ingestion.py                              # Frontend Interface
-│   └── preprocessing.py
-|   └── model_training.py 
-|
+│ ├── data_ingestion.py # Frontend Interface
+│ ├── preprocessing.py
+│ └── model_training.py
 ├── utils/
-|   └── logger.py 
-|
-├── pipeline.py                   # Orchestrates all scripts in src folder
-├── main.py                       # FastApi code
-├── predict.py                    # A utility function used in main.py
-├── app.py                        # Streamlit frontend
-├── .dockerignore               
+│ └── logger.py
+├── pipeline.py # Orchestrates all scripts in src folder
+├── main.py # FastAPI code
+├── predict.py # Utility function used in main.py
+├── app.py # Streamlit frontend
+├── .dockerignore
 ├── Dockerfile
 ├── .gitignore
-├── requirements.txt              # For containerisation
-├── requirements-dev.txt          # For creating the enviornment
+├── requirements.txt # For containerisation
+├── requirements-dev.txt # For creating the environment
 └── README.md
 
 
@@ -188,6 +180,7 @@ With predictive modeling, WanderWells Travels can now target the right customers
 ## 👨‍💻 Author
 
 Sarthak Sharma
+
 Data Science Student | Machine Learning , Deep Learning , NLP , GenAI Enthusiast
 
 📧 [Email Me](2sarthaksharma@gmail.com)
