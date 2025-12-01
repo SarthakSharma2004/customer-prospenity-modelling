@@ -10,7 +10,9 @@ load_dotenv()
 # 🔗 FastAPI endpoint
 # -----------------------------
 
-API_URL = os.getenv("API_URL")
+# API_URL = os.getenv("API_URL")
+
+API_URL = st.secrets["API_URL"]
 
 
 
