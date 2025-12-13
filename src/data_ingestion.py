@@ -7,8 +7,7 @@ from utils.logger import get_logger
 
 logger = get_logger(__name__)
 
-''' THIS FUNCTION IS DESIGNEED TO LOAD THE DATA FROM A CSV FILE
-    AND TRANSFORM IT TO A PANDAS DATAFRAME '''
+
 
 class DataIngestion :
 
@@ -69,50 +68,3 @@ class DataIngestion :
             raise e
         
     
-    # def save_data(self, df : pd.DataFrame , save_path : str) :
-    #     """
-    #     Saves the DataFrame to a CSV file at the specified path.
-    #     Args:
-    #         df (pd.DataFrame): The DataFrame to be saved.
-    #         save_path (str): The path where the CSV file should be saved.
-    #     """
-    #     try :
-    #         os.makedirs(os.path.dirname(save_path) , exist_ok = True)
-    #         self.df.to_csv(save_path , index = False)
-    #         logger.info(f"Data saved to {save_path}")
-
-    #     except Exception as e :
-    #         logger.exception(f"Error saving data to {save_path}")
-    #         raise
-
-
-
-
-
-
-
-
-# def ingest_data(file_path : str) -> pd.DataFrame :
-#     try:
-        
-#         if os.path.exists(file_path) :
-#             logger.info(f"Loading data from {file_path}")
-            
-#             df = pd.read_csv(file_path)
-#             logger.info(f"Data loaded Successfully. Shape : {df.shape}")
-#             return df
-        
-#         else :
-#             logger.error(f"File not found: {file_path}")
-#             raise FileNotFoundError(f'File not found: {file_path}')
-
-
-#     except pd.errors.EmptyDataError as e:
-#         logger.error(f"File is empty: {file_path}")
-#         raise e
-    
-    
-#     except Exception as e:
-#         logger.exception(f"Unexpected error loading data from {file_path}")
-#         raise 
-        
