@@ -8,7 +8,7 @@ import requests
 
 # API_URL = os.getenv("API_URL")
 
-API_URL = st.secrets["API_URL"]
+API_URL = st.secrets.get("API_URL", "http://localhost:8000")
 
 
 
