@@ -24,6 +24,22 @@ This project uses machine learning and data analytics to identify which customer
 ---
 
 
+## 📊 About the Data
+
+*Dataset Link*
+
+[Tour Package Prediction Dataset on Kaggle](https://www.kaggle.com/datasets/sanamps/tourpackageprediction)
+
+
+The dataset contains information about customer demographics, behavior, and interactions with the sales team.
+
+The dataset was stored on AWS S3
+
+
+
+---
+
+
 ## 🎯 Objective
 
 To build a predictive model that classifies potential customers into two groups:
@@ -51,74 +67,52 @@ Performance on Test Set
 - Recall: 0.84
 
 
-              precision    recall  f1-score   support
+| Class            | Precision | Recall | F1-Score | Support |
+| ---------------- | --------- | ------ | -------- | ------- |
+| **0**            | 0.96      | 0.98   | 0.97     | 787     |
+| **1**            | 0.91      | 0.84   | 0.87     | 191     |
+| **Accuracy**     |           |        | 0.95     | 978     |
+| **Macro Avg**    | 0.94      | 0.91   | 0.92     | 978     |
+| **Weighted Avg** | 0.95      | 0.95   | 0.95     | 978     |
 
-           0       0.96      0.98      0.97       787
-           1       0.91      0.84      0.87       191
 
-  accuracy                             0.95       978
-  macro avg        0.94      0.91      0.92       978
-  weighted avg     0.95      0.95      0.95       978
+### Businedd Impact:
+
+The model correctly identifies 84% of all actual buyers, compared to the earlier 18% conversion rate from random outreach.
+This represents an estimated:
+
+⭐ → 4.7× improvement in targeted marketing effectiveness
 
 
+- Confusion Matrix
 ![Confusion Matrix](assets/cm.png)
+
+- ROC-AUC Curve
 ![ROC Curve](assets/roc-auc.png)
+
+- P-R Curve
 ![Precision-Recall Curve](assets/precision-recall.png)
 
 
----
-
-
-
-## 📊 About the Data
-
-*Dataset Link*
-
-[Tour Package Prediction Dataset on Kaggle](https://www.kaggle.com/datasets/sanamps/tourpackageprediction)
-
-
-The dataset contains information about customer demographics, behavior, and interactions with the sales team.
-
-The dataset was stored on AWS S3
 
 
 ---
 
 
 
-## 🧠 Approach
+🔧 Project Workflow
 
 1. 🔍 Exploratory Data Analysis (EDA)
 
-* Identified correlations between income, occupation, and package purchase rate
+2. 🧹 Data Preprocessing & Feature Engineering
 
-* Visualized demographic patterns using Seaborn and Matplotlib
+3. ⚙️ Model Training & Evaluation
 
+4. 🚀 FastAPI Backend for Model Prediction
 
+5. 🐳 Dockerized Model Deployment
 
-2. 🧹 Data Preprocessing
-
-* Handled missing values
-
-* Encoded categorical features 
-
-* Scaled numerical features
-
-* Created new impactful features from existing ones
-
-
-
-3. 🤖 Model Development 
-
-Trained multiple classification models:
-
-* XGBoost
-* Random Forest
-* GradientBoostingClassifier
-* AdaBoostClassifier
-* Decision Tree
-* Logistic Regression
-* Support Vector Classifier (SVC)
+6. ☁️ Deployment on AWS EC2
 
 XGBOOST CLASSIFIER was selected as the best-performing classifier model after hyperparameter tuning. 
 
@@ -126,12 +120,8 @@ XGBOOST CLASSIFIER was selected as the best-performing classifier model after hy
 ---
 
 
-## 🌐 Model Deployment
+## 🐳 Docker Hub Registry
 
-Exposed model predictions via FastAPI , and deployed it on AWS (EC2)
-Integrated frontend using Streamlit , deployed frontend on Streamlit Cloud
-
-### 🐳 Docker Hub Registry
 [![Docker Image](https://img.shields.io/badge/Docker%20Hub-customer--prospenity--api-2496ED?logo=docker)](https://hub.docker.com/repository/docker/isarthak24/customer-prospenity-api/tags)
 
 
