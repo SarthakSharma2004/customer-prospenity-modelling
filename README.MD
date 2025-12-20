@@ -13,7 +13,7 @@
 
 WanderWells Travels, a rapidly growing luxury travel company, aims to revolutionize customer targeting for its newest offering — the Zen Escape Wellness Package 🧘‍♀️✨
 
-Previously, marketing campaigns reached customers randomly, leading to high costs and low conversion rates.
+Previously, marketing campaigns reached customers randomly, leading to high costs and low conversion rates (~18 %).
 
 This project uses machine learning and data analytics to identify which customers are most likely to purchase the new package — helping the marketing team work smarter, not harder.
 
@@ -46,6 +46,8 @@ This helps the marketing team focus resources on the most promising leads, there
 
 The dataset contains information about customer demographics, behavior, and interactions with the sales team.
 
+The dataset was stored on AWS S3
+
 
 ---
 
@@ -60,9 +62,6 @@ The dataset contains information about customer demographics, behavior, and inte
 * Visualized demographic patterns using Seaborn and Matplotlib
 
 
----
-
-
 
 2. 🧹 Data Preprocessing
 
@@ -73,9 +72,6 @@ The dataset contains information about customer demographics, behavior, and inte
 * Scaled numerical features
 
 * Created new impactful features from existing ones
-
-
----
 
 
 
@@ -99,10 +95,13 @@ XGBOOST CLASSIFIER was selected as the best-performing classifier model after hy
 
 ## 🌐 Model Deployment
 
-Exposed model predictions via FastAPI , Dockerised the API and deployed it on AWS (EC2)
-Integrated frontend using Streamlit , deployed using render
+Exposed model predictions via FastAPI , and deployed it on AWS (EC2)
+Integrated frontend using Streamlit , deployed frontend on Streamlit Cloud
 
 [![Docker Image](https://img.shields.io/badge/Docker-Container-blue?logo=docker)](https://hub.docker.com/repository/docker/isarthak24/customer-prospenity-api/general)
+
+### 🐳 Docker Hub Registry
+[![Docker Image](https://img.shields.io/badge/Docker%20Hub-customer--prospenity--api-2496ED?logo=docker)](https://hub.docker.com/repository/docker/isarthak24/customer-prospenity-api/tags)
 
 
 ---
