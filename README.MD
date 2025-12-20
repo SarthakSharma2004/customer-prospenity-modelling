@@ -17,9 +17,11 @@ Previously, marketing campaigns reached customers randomly, leading to high cost
 
 This project uses machine learning and data analytics to identify which customers are most likely to purchase the new package — helping the marketing team work smarter, not harder.
 
+### 🚀 Live Demo
+[![Streamlit App](https://img.shields.io/badge/Live%20Demo-Streamlit%20App-FF4B4B?logo=streamlit)](https://wanderwells-customer-prospenity.streamlit.app/)
+
 
 ---
-
 
 
 ## 🎯 Objective
@@ -31,6 +33,37 @@ To build a predictive model that classifies potential customers into two groups:
 * Not Likely to Purchase 🔴
 
 This helps the marketing team focus resources on the most promising leads, thereby reducing costs and boosting sales.
+
+
+---
+
+
+## 📊 Model Performance Results
+
+Performance on Test Set
+
+- Accuracy: 0.95
+
+- F1 Score: 0.87
+
+- Precision: 0.91
+
+- Recall: 0.84
+
+
+              precision    recall  f1-score   support
+
+           0       0.96      0.98      0.97       787
+           1       0.91      0.84      0.87       191
+
+  accuracy                             0.95       978
+  macro avg        0.94      0.91      0.92       978
+  weighted avg     0.95      0.95      0.95       978
+
+
+![Confusion Matrix](assets/cm.png)
+![ROC Curve](assets/roc-auc.png)
+![Precision-Recall Curve](assets/precision-recall.png)
 
 
 ---
@@ -98,8 +131,6 @@ XGBOOST CLASSIFIER was selected as the best-performing classifier model after hy
 Exposed model predictions via FastAPI , and deployed it on AWS (EC2)
 Integrated frontend using Streamlit , deployed frontend on Streamlit Cloud
 
-[![Docker Image](https://img.shields.io/badge/Docker-Container-blue?logo=docker)](https://hub.docker.com/repository/docker/isarthak24/customer-prospenity-api/general)
-
 ### 🐳 Docker Hub Registry
 [![Docker Image](https://img.shields.io/badge/Docker%20Hub-customer--prospenity--api-2496ED?logo=docker)](https://hub.docker.com/repository/docker/isarthak24/customer-prospenity-api/tags)
 
@@ -113,109 +144,11 @@ Integrated frontend using Streamlit , deployed frontend on Streamlit Cloud
 | ------------------------ | ------------------------------------------------ |
 | **Programming Language** | Python 3.13                                      |
 | **Frameworks**           | FastAPI, Streamlit                               |
-| **Libraries**            | Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn |
+| **Libraries**            | Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, XGBoost |
 | **Deployment**           | Docker, AWS EC2                                  |
 | **Version Control**      | Git & GitHub                                     |
 | **Data Validation**      | Pydantic                                         |
 | **IDE**                  | Visual Studio Code, Jupyter Notebook             |
-
-
----
-
-
-## Project Structure :
-
-WanderWells_Travels_Propensity_Model/
-
-├── Data/
-|
-│ ├── raw_data.csv
-|
-│ └── cleaned_data.csv
-|
-|
-├── artifacts/
-|
-│ ├── best_model_pipeline.pkl
-|
-│ ├── model.pkl
-|
-│ └── preprocessor.pkl
-|
-|
-├── notebooks/
-|
-│ └── Prospenity_Modelling.ipynb
-|
-|
-├── logs/
-|
-│ └── logs                        # contains all the logs of the model pipeline
-|
-|
-├── schema/
-|
-│ ├── prediction_response.py # Pydantic Model to validate response
-|
-│ └── user_input.py # Pydantic Model to validate user input
-|
-|
-|
-├── src/
-|
-│ ├── data_ingestion.py # Frontend Interface
-|
-│ ├── preprocessing.py
-|
-│ └── model_training.py
-|
-|
-├── utils/
-|
-│ └── logger.py
-|
-|
-├── pipeline.py                   # Orchestrates all scripts in src folder
-|
-|
-├── main.py                       # FastAPI code
-|
-|
-├── predict.py                    # Utility function used in main.py
-|
-|
-├── app.py                        # Streamlit frontend
-|
-|
-├── .dockerignore
-|
-|
-├── Dockerfile
-|
-|
-├── .gitignore
-|
-|
-├── requirements.txt              # For containerisation
-|
-|
-├── requirements-dev.txt          # For creating the environment
-|
-|
-└── README.md
-
-
----
-
-
-## KPI And Insights
-
-* Male Customers from Tier 1 cities, aged 30-40 having Large Businesses had highest conversion rates
-* Male Customers from Tier 3 cities, having Small Businesses had goood conversion rates
-* Salaried Female Customers from Tier 3 cities had also bought the package
-* Self Enquiry type contacts had better conversion rates than Company Invited.
-* Customers who enquired for Basic package converted the most
-* Unmarried customers had better conversion rate than Married
 
 
 ---
