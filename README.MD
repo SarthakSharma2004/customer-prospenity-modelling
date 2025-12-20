@@ -13,7 +13,7 @@
 
 WanderWells Travels, a rapidly growing luxury travel company, aims to revolutionize customer targeting for its newest offering — the Zen Escape Wellness Package 🧘‍♀️✨
 
-Previously, marketing campaigns reached customers randomly, leading to high costs and low conversion rates (~18 %).
+Previously, marketing campaigns reached customers randomly, leading to high costs and low conversion rates (~19 %).
 
 This project uses machine learning and data analytics to identify which customers are most likely to purchase the new package — helping the marketing team work smarter, not harder.
 
@@ -78,10 +78,10 @@ Performance on Test Set
 
 ### Businedd Impact:
 
-The model correctly identifies 84% of all actual buyers, compared to the earlier 18% conversion rate from random outreach.
-This represents an estimated:
+Model-selected leads convert at ~91% vs. the original 19% baseline,
+delivering a 4.7× 
 
-⭐ → 4.7× improvement in targeted marketing effectiveness
+⭐ → 4.7× uplift in conversion efficiency
 
 
 - Confusion Matrix
