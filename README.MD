@@ -79,7 +79,7 @@ Performance on Test Set
 ### Businedd Impact:
 
 Model-selected leads convert at ~91% vs. the original 19% baseline,
-delivering a 4.7× 
+delivering a : 
 
 ⭐ → 4.7× uplift in conversion efficiency
 
