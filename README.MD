@@ -76,12 +76,12 @@ Performance on Test Set
 | **Weighted Avg** | 0.95      | 0.95   | 0.95     | 978     |
 
 
-### Businedd Impact:
+### Business Impact:
 
 Model-selected leads convert at ~91% vs. the original 19% baseline,
 delivering a : 
 
-⭐ → 4.7× uplift in conversion efficiency
+- ⭐ → 4.7× uplift in conversion efficiency
 
 
 - Confusion Matrix
