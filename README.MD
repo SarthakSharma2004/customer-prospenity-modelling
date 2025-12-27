@@ -18,7 +18,7 @@ Previously, marketing campaigns reached customers randomly, leading to high cost
 This project uses machine learning and data analytics to identify which customers are most likely to purchase the new package — helping the marketing team work smarter, not harder.
 
 ### 🚀 Live Demo
-[![Streamlit App](https://img.shields.io/badge/Live%20Demo-Streamlit%20App-FF4B4B?logo=streamlit)](https://wanderwells-customer-prospenity.streamlit.app/)
+[![Streamlit App](https://img.shields.io/badge/Live%20Demo-Streamlit%20App-FF4B4B?logo=streamlit)](https://wanderwells-customer-propensity.streamlit.app/)
 
 
 ---
