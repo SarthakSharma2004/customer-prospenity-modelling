@@ -16,7 +16,7 @@ API_URL = st.secrets.get("API_URL", "http://localhost:8000")
 # 🖤 Page Config
 # -----------------------------
 st.set_page_config(
-    page_title="Customer Prosperity Prediction",
+    page_title="Customer Propensity Prediction",
     page_icon="💰",
     layout="centered",
     initial_sidebar_state="expanded"
