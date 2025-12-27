@@ -89,7 +89,7 @@ with st.sidebar:
 # -----------------------------
 # 💼 Main Page
 # -----------------------------
-st.title("💼 Customer Prosperity Modelling")
+st.title("💼 Customer Propensity Modelling")
 st.markdown("<p style='text-align:center;color:#c9d1d9;'>Predict whether a customer is likely to buy based on their profile.</p>", unsafe_allow_html=True)
 
 # -----------------------------
